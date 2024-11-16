@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
+DISCORD_TOKEN=''
 
 class Client(discord.Client):
     async def on_ready(self):
@@ -28,5 +29,5 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = Client(intents=intents)
-client.run('')
+client.run(DISCORD_TOKEN)
 
